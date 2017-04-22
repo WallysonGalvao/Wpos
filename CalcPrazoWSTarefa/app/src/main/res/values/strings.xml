@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Calcular Prazo</string>
+
+    <string name="lblPeso">Peso: </string>
+    <string name="lblTipoServico">Tipo de Serviço: </string>
+    <string name="btnCalcular">Calcular</string>
+
+    <string name="lblPrazo">Prazo: </string>
+    <string name="lblEntregaSabado">Entrega aos Sábados?: </string>
+    <string name="btnE">Calcular</string>
+    <string name="lblTipoServicoPopUp">Escolha o serviço</string>
+
+    <string name="prazo_mensagem">%1$s dias.</string>
+
+    <string name="sim">SIM</string>
+    <string name="nao">NÃO</string>
+
+    <!-- Alimentar valores do Spinner -->
+    <string-array name="arrTipoServico">
+        <item>SEDEX Varejo</item>
+        <item>SEDEX a Cobrar Varejo</item>
+        <item>SEDEX 10 Varejo</item>
+        <item>SEDEX Hoje Varejo</item>
+        <item>PAC Varejo </item>
+    </string-array>
+</resources>

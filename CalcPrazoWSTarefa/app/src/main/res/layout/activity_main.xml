@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="br.com.wpos.calcprazowstarefa.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/txtPeso"
+            android:text="@string/lblPeso"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblTipoServico"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spiTipoServico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/arrTipoServico"
+            android:prompt="@string/lblTipoServicoPopUp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calcularPrazo"
+            android:text="@string/btnCalcular" />
+    </LinearLayout>
+
+    <!-- Rótulos para Exibição do PRzo e entrega aos sábados -->
+    <LinearLayout
+        android:id="@+id/linhaPrazo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPrazo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txvPrazo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linhaEntregaSabado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblEntregaSabado"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txvEntregaSabado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
