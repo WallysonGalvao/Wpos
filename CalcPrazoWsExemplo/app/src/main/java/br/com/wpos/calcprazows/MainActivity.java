@@ -29,7 +29,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
+        /*
+        * Em API's maiores que 9, é necessário habilitar um ThreadPolicy
+        * para liberar o acesso ao WebService externo
+        */
+        if(Build.VERSION.SDK_INT > 9){
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         // Identifica os elementos de layout para manipulação
         txtCepOrigem = (EditText) findViewById(R.id.txtCepOrigem);
