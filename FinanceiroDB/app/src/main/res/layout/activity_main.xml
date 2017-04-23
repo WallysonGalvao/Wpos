@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="br.com.wpos.financeirodb.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <!-- Botões de Rádio para escolher entre despesa e receita -->
+        <TextView
+            android:id="@+id/lblDespesaReceita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblDespesaReceita" />
+
+        <RadioGroup
+            android:id="@+id/radDespesaReceita"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radDespesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="carregarTipo"
+                android:text="@string/lblDespesa" />
+
+            <RadioButton
+                android:id="@+id/radReceita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="carregarTipo"
+                android:text="@string/lblReceita" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Caixa de Seleção com o Tipo de Despesa/Receita -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblTipoDespesaReceita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblTipoDespesaReceita" />
+
+        <Spinner
+            android:id="@+id/spiTipoDespesaReceita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Campo para a data de despesa/receita -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/txtData"
+            android:text="@string/lblData" />
+
+        <EditText
+            android:id="@+id/txtData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <!-- Nome/Descrição da Despesa/Receita -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/txtNome"
+            android:text="@string/lblNome" />
+
+        <EditText
+            android:id="@+id/txtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- Valor da Despesa/Receita -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/txtValor"
+            android:text="@string/lblValor" />
+
+        <EditText
+            android:id="@+id/txtValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <!-- Botão Cadastrar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="40dp">
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cadastrarDespesaReceita"
+            android:text="@string/btnCadastrar" />
+    </LinearLayout>
+
+
+</LinearLayout>

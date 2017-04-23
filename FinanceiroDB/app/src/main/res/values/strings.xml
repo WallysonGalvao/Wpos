@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FinanceiroDB</string>
+
+    <string name="lblDespesaReceita">Despesa/Receita: </string>
+    <string name="lblDespesa">Despesa</string>
+    <string name="lblReceita">Receita</string>
+    <string name="D">D</string>
+    <string name="R">R</string>
+    <string name="lblNome">Nome: </string>
+    <string name="lblValor">Valor: </string>
+    <string name="lblTipoDespesaReceita">Tipo: </string>
+    <string name="lblData">Data: </string>
+    <string name="btnCadastrar">Cadastrar</string>
+</resources>
